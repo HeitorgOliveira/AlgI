@@ -1,12 +1,12 @@
-all: main.c  circulo.c ponto.c
-	gcc main.c circulo.o ponto.o -std=c99 -pedantic-errors -Wall -lm
+all: main.c item.o Pilha.o
+	gcc main.c item.o Pilha.o -o main -std=c99 -pedantic-errors -Wall -lm
 
 run:
 	./main
 
-circulo.o:
-	gcc -c circulo.o
+item.o:
+	gcc -c item.c -o item.o
 
-ponto.o:
-	gcc -c ponto.o
+Pilha.o:
+	gcc -c Pilha.c -o Pilha.o
 
